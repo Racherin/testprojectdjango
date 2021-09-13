@@ -1,10 +1,9 @@
 from django.contrib import admin
 from django.urls import path
-from blog.views import *
+from api.views import *
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index')
-
+    path('listproducts/', listproducts, name="listproducts")
 ]

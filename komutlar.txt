@@ -1,15 +1,18 @@
 pip install virtualenv
 
-virtualenv -p -/usr/local/bin/<python-versionu> virtualenv
+virtualenv -p -/usr/local/bin/<python-versionu> venv
 
 bash için
 source venv/bin/active
+
+pip freeze > requirements.txt
+
+pip install -r requirements.txt
 
 cmd için
 venv/Scripts/active
 
 çıkmak için deactivate
-
 
 django projesini başlatma
 django-admin startproject core . 
@@ -28,3 +31,5 @@ python manage.py startapp api
 python manage.py makemigrations --dry-run
 
 python manage.py createsuperuser
+
+python manage.py inspectdb > api/models.py

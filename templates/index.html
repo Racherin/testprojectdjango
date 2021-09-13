@@ -4,6 +4,12 @@ BURASI {{ title }} !! ! ! !
 
 <a href="{% url 'index' %}">Anasayfa</a>
 
+
+{% for item in items %}
+<div>{{item.product_name}}</div>
+{% endfor %}
+
+
 <script>
     var myList = '{{myproducts}}'
 </script>
