@@ -5,5 +5,5 @@ from api.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('listproducts/', listproducts, name="listproducts")
+    path('listproducts/', ProductList.as_view(), name="listproducts")
 ]
